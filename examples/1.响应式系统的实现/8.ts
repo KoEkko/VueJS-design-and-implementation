@@ -156,7 +156,7 @@ function computed(getter) {
     get value() {
       if (dirty) {
         value = effectFn();
-        dirty = true;
+        dirty = false;
       }
       // 当读取 value 时，手动调用 track() 函数进行追踪
       track(obj,'value')
